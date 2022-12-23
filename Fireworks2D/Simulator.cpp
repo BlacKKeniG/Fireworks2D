@@ -49,22 +49,22 @@ INT Simulator::run() {
 
 		if (!_listFireworkObjects.empty()) {
 
-			for (auto itFistObjects = _listFireworkObjects.begin() 
+			for (auto fireworkObjects = _listFireworkObjects.begin()
 				, itLastObjects =  _listFireworkObjects.end()
-				; itFistObjects != itLastObjects;) {
+				; fireworkObjects != itLastObjects;) {
 
-				if (!itFistObjects->get()->fly()) {
-					itFistObjects->get()->explosion(_listFireworkObjects);
-					itFistObjects = _listFireworkObjects.erase(itFistObjects);
+				if (!fireworkObjects->get()->fly()) {
+					fireworkObjects->get()->explosion(_listFireworkObjects);
+					fireworkObjects = _listFireworkObjects.erase(fireworkObjects);
 				}
 				else {
 					_rendering.drawFireworkObject(
-						  itFistObjects->get()->_position
-						, itFistObjects->get()->_width
-						, itFistObjects->get()->_height
-						, itFistObjects->get()->_color
+						fireworkObjects->get()->_position
+						, fireworkObjects->get()->_width
+						, fireworkObjects->get()->_height
+						, fireworkObjects->get()->_color
 					);
-					++itFistObjects;
+					++fireworkObjects;
 				}
 			}
 		}

@@ -26,4 +26,13 @@ BOOL FireworkObject::fly() {
 	return FALSE;
 }
 
+FireworkObject& FireworkObject::operator = (FireworkObject& other) {
+	_color = other._color;
+	_flightTimer = other._flightTimer;
+	_flightDirectionAngle = other._flightDirectionAngle;
+	_flightSpeed = other._flightSpeed;
+	_timeToExplosion = other._timeToExplosion;
+	return *this;
+}
+
 

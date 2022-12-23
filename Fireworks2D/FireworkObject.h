@@ -20,6 +20,8 @@ public:
 	explicit FireworkObject(const COORD position, const eColor color);
 	virtual ~FireworkObject() = default;
 
+	FireworkObject& operator = (FireworkObject& other);
+
 	BOOL fly();
 	virtual VOID explosion(std::list<std::shared_ptr<FireworkObject>>& list) {};
 

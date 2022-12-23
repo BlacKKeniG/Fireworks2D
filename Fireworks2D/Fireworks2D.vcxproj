@@ -40,6 +40,7 @@
     <ClInclude Include="eColor.h" />
     <ClInclude Include="FireworkObject.h" />
     <ClInclude Include="GlobalValues.h" />
+    <ClInclude Include="Tail.h" />
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="RandomGenerators.h" />
     <ClInclude Include="Rendering.h" />
