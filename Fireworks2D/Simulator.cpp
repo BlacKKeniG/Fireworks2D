@@ -50,8 +50,8 @@ INT Simulator::run() {
 		if (!_listFireworkObjects.empty()) {
 
 			for (auto fireworkObjects = _listFireworkObjects.begin()
-				, itLastObjects =  _listFireworkObjects.end()
-				; fireworkObjects != itLastObjects;) {
+				, lastFireworkObjects =  _listFireworkObjects.end()
+				; fireworkObjects != lastFireworkObjects;) {
 
 				if (!fireworkObjects->get()->fly()) {
 					fireworkObjects->get()->explosion(_listFireworkObjects);
